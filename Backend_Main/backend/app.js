@@ -3,6 +3,7 @@ const cors = require('cors')
 const path = require('path')
 require('dotenv').config()
 
+const healthRoutes = require('./routes/healthRoutes')
 const config = require('./config/config')
 const userRoutes = require('./routes/userRoutes')
 const resumeRoutes = require('./routes/resumeRoutes')
@@ -23,8 +24,7 @@ app.use(express.json({ limit: '5mb' }))
 app.use(express.urlencoded({ extended: true }))
 app.use('/uploads', express.static(path.resolve(config.uploadDir)))
 
-app.get('/health', (req, res) => res.json({ success: true, message: 'AI Resume Analyzer backend is running' }))
-
+app.use('/health', healthRoutes)
 app.use('/api/users', userRoutes)
 app.use('/api/resumes', resumeRoutes)
 app.use('/api/jds', jdRoutes)
