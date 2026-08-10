@@ -1,0 +1,625 @@
+{
+  "info": {
+    "name": "AI Resume Analyzer / ATS Resume Analyzer - Complete API Collection",
+    "description": "Complete Postman collection for the Node.js, Express.js and MySQL AI Resume Analyzer backend. Set base_url, then run signup/signin requests to capture candidate, recruiter and admin tokens.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    { "key": "base_url", "value": "http://localhost:5000" },
+    { "key": "token", "value": "" },
+    { "key": "candidate_token", "value": "" },
+    { "key": "recruiter_token", "value": "" },
+    { "key": "admin_token", "value": "" },
+    { "key": "user_id", "value": "1" },
+    { "key": "resume_id", "value": "1" },
+    { "key": "jd_id", "value": "1" },
+    { "key": "result_id", "value": "1" },
+    { "key": "skill_id", "value": "1" },
+    { "key": "page", "value": "1" },
+    { "key": "limit", "value": "10" }
+  ],
+  "item": [
+    {
+      "name": "Health",
+      "item": [
+        {
+          "name": "Health Check",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": { "raw": "{{base_url}}/health", "host": ["{{base_url}}"], "path": ["health"] }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Auth / Users",
+      "item": [
+        {
+          "name": "1. Signup - Candidate",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "const json = pm.response.json();",
+                  "if (json.data && json.data.token) {",
+                  "  pm.collectionVariables.set('candidate_token', json.data.token);",
+                  "  pm.collectionVariables.set('token', json.data.token);",
+                  "}",
+                  "if (json.data && json.data.user) pm.collectionVariables.set('user_id', json.data.user.user_id);"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "auth": { "type": "noauth" },
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Candidate User\",\n  \"email\": \"candidate@example.com\",\n  \"password\": \"password123\",\n  \"role\": \"candidate\"\n}"
+            },
+            "url": { "raw": "{{base_url}}/api/users/signup", "host": ["{{base_url}}"], "path": ["api", "users", "signup"] }
+          }
+        },
+        {
+          "name": "2. Signup - Recruiter",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "const json = pm.response.json();",
+                  "if (json.data && json.data.token) pm.collectionVariables.set('recruiter_token', json.data.token);"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "auth": { "type": "noauth" },
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Recruiter User\",\n  \"email\": \"recruiter@example.com\",\n  \"password\": \"password123\",\n  \"role\": \"recruiter\"\n}"
+            },
+            "url": { "raw": "{{base_url}}/api/users/signup", "host": ["{{base_url}}"], "path": ["api", "users", "signup"] }
+          }
+        },
+        {
+          "name": "3. Signup - Admin Attempt",
+          "request": {
+            "auth": { "type": "noauth" },
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Invalid Admin\",\n  \"email\": \"invalid.admin@example.com\",\n  \"password\": \"password123\",\n  \"role\": \"admin\"\n}"
+            },
+            "url": { "raw": "{{base_url}}/api/users/signup", "host": ["{{base_url}}"], "path": ["api", "users", "signup"] }
+          }
+        },
+        {
+          "name": "4. Signin - Candidate",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "const json = pm.response.json();",
+                  "if (json.data && json.data.token) {",
+                  "  pm.collectionVariables.set('candidate_token', json.data.token);",
+                  "  pm.collectionVariables.set('token', json.data.token);",
+                  "}",
+                  "if (json.data && json.data.user) pm.collectionVariables.set('user_id', json.data.user.user_id);"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "auth": { "type": "noauth" },
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"candidate@example.com\",\n  \"password\": \"password123\"\n}"
+            },
+            "url": { "raw": "{{base_url}}/api/users/signin", "host": ["{{base_url}}"], "path": ["api", "users", "signin"] }
+          }
+        },
+        {
+          "name": "5. Signin - Recruiter",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "const json = pm.response.json();",
+                  "if (json.data && json.data.token) pm.collectionVariables.set('recruiter_token', json.data.token);"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "auth": { "type": "noauth" },
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"recruiter@example.com\",\n  \"password\": \"password123\"\n}"
+            },
+            "url": { "raw": "{{base_url}}/api/users/signin", "host": ["{{base_url}}"], "path": ["api", "users", "signin"] }
+          }
+        },
+        {
+          "name": "6. Signin - Admin",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "const json = pm.response.json();",
+                  "if (json.data && json.data.token) pm.collectionVariables.set('admin_token', json.data.token);"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "auth": { "type": "noauth" },
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"admin@gmail.com\",\n  \"password\": \"admin123\"\n}"
+            },
+            "url": { "raw": "{{base_url}}/api/users/signin", "host": ["{{base_url}}"], "path": ["api", "users", "signin"] }
+          }
+        },
+        {
+          "name": "7. Get Profile",
+          "request": {
+            "auth": { "type": "bearer", "bearer": [{ "key": "token", "value": "{{token}}", "type": "string" }] },
+            "method": "GET",
+            "header": [],
+            "url": { "raw": "{{base_url}}/api/users/profile", "host": ["{{base_url}}"], "path": ["api", "users", "profile"] }
+          }
+        },
+        {
+          "name": "8. Update Profile",
+          "request": {
+            "auth": { "type": "bearer", "bearer": [{ "key": "token", "value": "{{token}}", "type": "string" }] },
+            "method": "PATCH",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": { "mode": "raw", "raw": "{\n  \"name\": \"Updated User\"\n}" },
+            "url": { "raw": "{{base_url}}/api/users/profile", "host": ["{{base_url}}"], "path": ["api", "users", "profile"] }
+          }
+        },
+        {
+          "name": "9. Get All Users - Admin Only",
+          "request": {
+            "auth": { "type": "bearer", "bearer": [{ "key": "token", "value": "{{admin_token}}", "type": "string" }] },
+            "method": "GET",
+            "header": [],
+            "url": { "raw": "{{base_url}}/api/users?page={{page}}&limit={{limit}}", "host": ["{{base_url}}"], "path": ["api", "users"], "query": [{ "key": "page", "value": "{{page}}" }, { "key": "limit", "value": "{{limit}}" }] }
+          }
+        },
+        {
+          "name": "10. Delete User - Admin Only",
+          "request": {
+            "auth": { "type": "bearer", "bearer": [{ "key": "token", "value": "{{admin_token}}", "type": "string" }] },
+            "method": "DELETE",
+            "header": [],
+            "url": { "raw": "{{base_url}}/api/users/{{user_id}}", "host": ["{{base_url}}"], "path": ["api", "users", "{{user_id}}"] }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Candidate APIs",
+      "item": [
+        {
+          "name": "11. Upload Resume",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "const json = pm.response.json();",
+                  "if (json.data && json.data.resume_id) pm.collectionVariables.set('resume_id', json.data.resume_id);"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "auth": { "type": "bearer", "bearer": [{ "key": "token", "value": "{{candidate_token}}", "type": "string" }] },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [{ "key": "resume", "type": "file", "src": [] }]
+            },
+            "url": { "raw": "{{base_url}}/api/resumes/upload", "host": ["{{base_url}}"], "path": ["api", "resumes", "upload"] }
+          }
+        },
+        {
+          "name": "12. Candidate Analysis - Existing Resume + JD Text",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "const json = pm.response.json();",
+                  "if (json.data && json.data.result_id) pm.collectionVariables.set('result_id', json.data.result_id);",
+                  "if (json.data && json.data.jd_id) pm.collectionVariables.set('jd_id', json.data.jd_id);"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "auth": { "type": "bearer", "bearer": [{ "key": "token", "value": "{{candidate_token}}", "type": "string" }] },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                { "key": "resume_id", "value": "{{resume_id}}", "type": "text" },
+                { "key": "jd_title", "value": "Backend Developer", "type": "text" },
+                { "key": "jd_text", "value": "We need JavaScript, Node.js, Express, MySQL, REST API, Git and problem solving skills.", "type": "text" }
+              ]
+            },
+            "url": { "raw": "{{base_url}}/api/analysis/candidate", "host": ["{{base_url}}"], "path": ["api", "analysis", "candidate"] }
+          }
+        },
+        {
+          "name": "13. Candidate Analysis - File + Existing JD",
+          "request": {
+            "auth": { "type": "bearer", "bearer": [{ "key": "token", "value": "{{candidate_token}}", "type": "string" }] },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                { "key": "resume", "type": "file", "src": [] },
+                { "key": "jd_id", "value": "{{jd_id}}", "type": "text" }
+              ]
+            },
+            "url": { "raw": "{{base_url}}/api/analysis/candidate", "host": ["{{base_url}}"], "path": ["api", "analysis", "candidate"] }
+          }
+        },
+        {
+          "name": "14. Get Candidate Resumes",
+          "request": {
+            "auth": { "type": "bearer", "bearer": [{ "key": "token", "value": "{{candidate_token}}", "type": "string" }] },
+            "method": "GET",
+            "header": [],
+            "url": { "raw": "{{base_url}}/api/resumes?page={{page}}&limit={{limit}}", "host": ["{{base_url}}"], "path": ["api", "resumes"], "query": [{ "key": "page", "value": "{{page}}" }, { "key": "limit", "value": "{{limit}}" }] }
+          }
+        },
+        {
+          "name": "15. Get Resume by ID",
+          "request": {
+            "auth": { "type": "bearer", "bearer": [{ "key": "token", "value": "{{candidate_token}}", "type": "string" }] },
+            "method": "GET",
+            "header": [],
+            "url": { "raw": "{{base_url}}/api/resumes/{{resume_id}}", "host": ["{{base_url}}"], "path": ["api", "resumes", "{{resume_id}}"] }
+          }
+        },
+        {
+          "name": "16. Delete Resume",
+          "request": {
+            "auth": { "type": "bearer", "bearer": [{ "key": "token", "value": "{{candidate_token}}", "type": "string" }] },
+            "method": "DELETE",
+            "header": [],
+            "url": { "raw": "{{base_url}}/api/resumes/{{resume_id}}", "host": ["{{base_url}}"], "path": ["api", "resumes", "{{resume_id}}"] }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Recruiter APIs",
+      "item": [
+        {
+          "name": "17. Create JD",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "const json = pm.response.json();",
+                  "if (json.data && json.data.jd_id) pm.collectionVariables.set('jd_id', json.data.jd_id);"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "auth": { "type": "bearer", "bearer": [{ "key": "token", "value": "{{recruiter_token}}", "type": "string" }] },
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"title\": \"Node.js Backend Developer\",\n  \"description\": \"Looking for JavaScript, Node.js, Express, MySQL, REST API, Git, Docker and problem solving skills.\",\n  \"experience_required\": 2\n}"
+            },
+            "url": { "raw": "{{base_url}}/api/jds", "host": ["{{base_url}}"], "path": ["api", "jds"] }
+          }
+        },
+        {
+          "name": "18. Get All JDs",
+          "request": {
+            "auth": { "type": "bearer", "bearer": [{ "key": "token", "value": "{{recruiter_token}}", "type": "string" }] },
+            "method": "GET",
+            "header": [],
+            "url": { "raw": "{{base_url}}/api/jds?page={{page}}&limit={{limit}}", "host": ["{{base_url}}"], "path": ["api", "jds"], "query": [{ "key": "page", "value": "{{page}}" }, { "key": "limit", "value": "{{limit}}" }] }
+          }
+        },
+        {
+          "name": "19. Get JD by ID",
+          "request": {
+            "auth": { "type": "bearer", "bearer": [{ "key": "token", "value": "{{recruiter_token}}", "type": "string" }] },
+            "method": "GET",
+            "header": [],
+            "url": { "raw": "{{base_url}}/api/jds/{{jd_id}}", "host": ["{{base_url}}"], "path": ["api", "jds", "{{jd_id}}"] }
+          }
+        },
+        {
+          "name": "20. Delete JD",
+          "request": {
+            "auth": { "type": "bearer", "bearer": [{ "key": "token", "value": "{{recruiter_token}}", "type": "string" }] },
+            "method": "DELETE",
+            "header": [],
+            "url": { "raw": "{{base_url}}/api/jds/{{jd_id}}", "host": ["{{base_url}}"], "path": ["api", "jds", "{{jd_id}}"] }
+          }
+        },
+        {
+          "name": "21. Recruiter - Upload and Rank Resume Files",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "const json = pm.response.json();",
+                  "if (json.data && json.data.length && json.data[0].result_id) pm.collectionVariables.set('result_id', json.data[0].result_id);",
+                  "if (json.data && json.data.length && json.data[0].resume_id) pm.collectionVariables.set('resume_id', json.data[0].resume_id);"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "auth": { "type": "bearer", "bearer": [{ "key": "token", "value": "{{recruiter_token}}", "type": "string" }] },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                { "key": "resumes", "type": "file", "src": [] },
+                { "key": "resumes", "type": "file", "src": [] }
+              ]
+            },
+            "url": { "raw": "{{base_url}}/api/rankings/{{jd_id}}", "host": ["{{base_url}}"], "path": ["api", "rankings", "{{jd_id}}"] }
+          }
+        },
+        {
+          "name": "22. Recruiter - Rank Existing Resume IDs",
+          "request": {
+            "auth": { "type": "bearer", "bearer": [{ "key": "token", "value": "{{recruiter_token}}", "type": "string" }] },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [{ "key": "resume_ids", "value": "{{resume_id}}", "type": "text" }]
+            },
+            "url": { "raw": "{{base_url}}/api/rankings/{{jd_id}}", "host": ["{{base_url}}"], "path": ["api", "rankings", "{{jd_id}}"] }
+          }
+        },
+        {
+          "name": "23. Recruiter - Get Rankings for JD",
+          "request": {
+            "auth": { "type": "bearer", "bearer": [{ "key": "token", "value": "{{recruiter_token}}", "type": "string" }] },
+            "method": "GET",
+            "header": [],
+            "url": { "raw": "{{base_url}}/api/rankings/{{jd_id}}", "host": ["{{base_url}}"], "path": ["api", "rankings", "{{jd_id}}"] }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Skills",
+      "item": [
+        {
+          "name": "24. Create Skill - Admin Only",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "const json = pm.response.json();",
+                  "if (json.data && json.data.skill_id) pm.collectionVariables.set('skill_id', json.data.skill_id);"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "auth": { "type": "bearer", "bearer": [{ "key": "token", "value": "{{admin_token}}", "type": "string" }] },
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": { "mode": "raw", "raw": "{\n  \"skill_name\": \"node.js\"\n}" },
+            "url": { "raw": "{{base_url}}/api/skills", "host": ["{{base_url}}"], "path": ["api", "skills"] }
+          }
+        },
+        {
+          "name": "25. Get All Skills",
+          "request": {
+            "auth": { "type": "bearer", "bearer": [{ "key": "token", "value": "{{token}}", "type": "string" }] },
+            "method": "GET",
+            "header": [],
+            "url": { "raw": "{{base_url}}/api/skills?page={{page}}&limit={{limit}}", "host": ["{{base_url}}"], "path": ["api", "skills"], "query": [{ "key": "page", "value": "{{page}}" }, { "key": "limit", "value": "{{limit}}" }] }
+          }
+        },
+        {
+          "name": "26. Get Skills for Resume",
+          "request": {
+            "auth": { "type": "bearer", "bearer": [{ "key": "token", "value": "{{token}}", "type": "string" }] },
+            "method": "GET",
+            "header": [],
+            "url": { "raw": "{{base_url}}/api/skills/resume/{{resume_id}}", "host": ["{{base_url}}"], "path": ["api", "skills", "resume", "{{resume_id}}"] }
+          }
+        },
+        {
+          "name": "27. Get Skills for JD",
+          "request": {
+            "auth": { "type": "bearer", "bearer": [{ "key": "token", "value": "{{token}}", "type": "string" }] },
+            "method": "GET",
+            "header": [],
+            "url": { "raw": "{{base_url}}/api/skills/jd/{{jd_id}}", "host": ["{{base_url}}"], "path": ["api", "skills", "jd", "{{jd_id}}"] }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Results and Recommendations",
+      "item": [
+        {
+          "name": "28. Get Results",
+          "request": {
+            "auth": { "type": "bearer", "bearer": [{ "key": "token", "value": "{{token}}", "type": "string" }] },
+            "method": "GET",
+            "header": [],
+            "url": { "raw": "{{base_url}}/api/results?page={{page}}&limit={{limit}}", "host": ["{{base_url}}"], "path": ["api", "results"], "query": [{ "key": "page", "value": "{{page}}" }, { "key": "limit", "value": "{{limit}}" }] }
+          }
+        },
+        {
+          "name": "29. Get Result by ID",
+          "request": {
+            "auth": { "type": "bearer", "bearer": [{ "key": "token", "value": "{{token}}", "type": "string" }] },
+            "method": "GET",
+            "header": [],
+            "url": { "raw": "{{base_url}}/api/results/{{result_id}}", "host": ["{{base_url}}"], "path": ["api", "results", "{{result_id}}"] }
+          }
+        },
+        {
+          "name": "30. Get Results by Resume",
+          "request": {
+            "auth": { "type": "bearer", "bearer": [{ "key": "token", "value": "{{token}}", "type": "string" }] },
+            "method": "GET",
+            "header": [],
+            "url": { "raw": "{{base_url}}/api/results/resume/{{resume_id}}?page={{page}}&limit={{limit}}", "host": ["{{base_url}}"], "path": ["api", "results", "resume", "{{resume_id}}"], "query": [{ "key": "page", "value": "{{page}}" }, { "key": "limit", "value": "{{limit}}" }] }
+          }
+        },
+        {
+          "name": "31. Get Results by JD",
+          "request": {
+            "auth": { "type": "bearer", "bearer": [{ "key": "token", "value": "{{token}}", "type": "string" }] },
+            "method": "GET",
+            "header": [],
+            "url": { "raw": "{{base_url}}/api/results/jd/{{jd_id}}?page={{page}}&limit={{limit}}", "host": ["{{base_url}}"], "path": ["api", "results", "jd", "{{jd_id}}"], "query": [{ "key": "page", "value": "{{page}}" }, { "key": "limit", "value": "{{limit}}" }] }
+          }
+        },
+        {
+          "name": "32. Get Recommendations for Result",
+          "request": {
+            "auth": { "type": "bearer", "bearer": [{ "key": "token", "value": "{{token}}", "type": "string" }] },
+            "method": "GET",
+            "header": [],
+            "url": { "raw": "{{base_url}}/api/recommendations/result/{{result_id}}", "host": ["{{base_url}}"], "path": ["api", "recommendations", "result", "{{result_id}}"] }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Admin APIs",
+      "item": [
+        {
+          "name": "33. Admin - Dashboard",
+          "request": {
+            "auth": { "type": "bearer", "bearer": [{ "key": "token", "value": "{{admin_token}}", "type": "string" }] },
+            "method": "GET",
+            "header": [],
+            "url": { "raw": "{{base_url}}/api/admin/dashboard", "host": ["{{base_url}}"], "path": ["api", "admin", "dashboard"] }
+          }
+        },
+        {
+          "name": "34. Admin - Get All Users",
+          "request": {
+            "auth": { "type": "bearer", "bearer": [{ "key": "token", "value": "{{admin_token}}", "type": "string" }] },
+            "method": "GET",
+            "header": [],
+            "url": { "raw": "{{base_url}}/api/admin/users?page={{page}}&limit={{limit}}", "host": ["{{base_url}}"], "path": ["api", "admin", "users"], "query": [{ "key": "page", "value": "{{page}}" }, { "key": "limit", "value": "{{limit}}" }] }
+          }
+        },
+        {
+          "name": "35. Admin - Get All Candidates",
+          "request": {
+            "auth": { "type": "bearer", "bearer": [{ "key": "token", "value": "{{admin_token}}", "type": "string" }] },
+            "method": "GET",
+            "header": [],
+            "url": { "raw": "{{base_url}}/api/admin/users?role=candidate&page={{page}}&limit={{limit}}", "host": ["{{base_url}}"], "path": ["api", "admin", "users"], "query": [{ "key": "role", "value": "candidate" }, { "key": "page", "value": "{{page}}" }, { "key": "limit", "value": "{{limit}}" }] }
+          }
+        },
+        {
+          "name": "36. Admin - Get All Recruiters",
+          "request": {
+            "auth": { "type": "bearer", "bearer": [{ "key": "token", "value": "{{admin_token}}", "type": "string" }] },
+            "method": "GET",
+            "header": [],
+            "url": { "raw": "{{base_url}}/api/admin/users?role=recruiter&page={{page}}&limit={{limit}}", "host": ["{{base_url}}"], "path": ["api", "admin", "users"], "query": [{ "key": "role", "value": "recruiter" }, { "key": "page", "value": "{{page}}" }, { "key": "limit", "value": "{{limit}}" }] }
+          }
+        },
+        {
+          "name": "37. Admin - Get All Resumes",
+          "request": {
+            "auth": { "type": "bearer", "bearer": [{ "key": "token", "value": "{{admin_token}}", "type": "string" }] },
+            "method": "GET",
+            "header": [],
+            "url": { "raw": "{{base_url}}/api/admin/resumes?page={{page}}&limit={{limit}}", "host": ["{{base_url}}"], "path": ["api", "admin", "resumes"], "query": [{ "key": "page", "value": "{{page}}" }, { "key": "limit", "value": "{{limit}}" }] }
+          }
+        },
+        {
+          "name": "38. Admin - Get All JDs",
+          "request": {
+            "auth": { "type": "bearer", "bearer": [{ "key": "token", "value": "{{admin_token}}", "type": "string" }] },
+            "method": "GET",
+            "header": [],
+            "url": { "raw": "{{base_url}}/api/admin/jds?page={{page}}&limit={{limit}}", "host": ["{{base_url}}"], "path": ["api", "admin", "jds"], "query": [{ "key": "page", "value": "{{page}}" }, { "key": "limit", "value": "{{limit}}" }] }
+          }
+        },
+        {
+          "name": "39. Admin - Get All Results",
+          "request": {
+            "auth": { "type": "bearer", "bearer": [{ "key": "token", "value": "{{admin_token}}", "type": "string" }] },
+            "method": "GET",
+            "header": [],
+            "url": { "raw": "{{base_url}}/api/admin/results?page={{page}}&limit={{limit}}", "host": ["{{base_url}}"], "path": ["api", "admin", "results"], "query": [{ "key": "page", "value": "{{page}}" }, { "key": "limit", "value": "{{limit}}" }] }
+          }
+        },
+        {
+          "name": "40. Admin - Get Logs",
+          "request": {
+            "auth": { "type": "bearer", "bearer": [{ "key": "token", "value": "{{admin_token}}", "type": "string" }] },
+            "method": "GET",
+            "header": [],
+            "url": { "raw": "{{base_url}}/api/admin/logs?page={{page}}&limit={{limit}}", "host": ["{{base_url}}"], "path": ["api", "admin", "logs"], "query": [{ "key": "page", "value": "{{page}}" }, { "key": "limit", "value": "{{limit}}" }] }
+          }
+        },
+        {
+          "name": "41. Admin - Delete User",
+          "request": {
+            "auth": { "type": "bearer", "bearer": [{ "key": "token", "value": "{{admin_token}}", "type": "string" }] },
+            "method": "DELETE",
+            "header": [],
+            "url": { "raw": "{{base_url}}/api/admin/users/{{user_id}}", "host": ["{{base_url}}"], "path": ["api", "admin", "users", "{{user_id}}"] }
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,151 @@
+JobID,JobRole,ExperienceYears,RequiredSkills,PreferredSkills,Education
+JD001,Java Developer,1,"Java, Spring Boot, Hibernate, MySQL, Git","Java, Spring Boot, Hibernate, Communication, Problem Solving",B.Tech/B.E/MCA/BCA
+JD002,Python Developer,2,"Python, Django, Flask, SQL, Git","Python, Django, Flask, Communication, Problem Solving",B.Tech/B.E/MCA/BCA
+JD003,MERN Stack Developer,3,"MongoDB, Express.js, React, Node.js, JavaScript","MongoDB, Express.js, React, Communication, Problem Solving",B.Tech/B.E/MCA/BCA
+JD004,Frontend Developer,4,"HTML, CSS, JavaScript, React, TypeScript","HTML, CSS, JavaScript, Communication, Problem Solving",B.Tech/B.E/MCA/BCA
+JD005,Backend Developer,5,"Java, Spring Boot, REST API, MySQL, Docker","Java, Spring Boot, REST API, Communication, Problem Solving",B.Tech/B.E/MCA/BCA
+JD006,Android Developer,0,"Java, Kotlin, Android, Firebase, Git","Java, Kotlin, Android, Communication, Problem Solving",B.Tech/B.E/MCA/BCA
+JD007,Flutter Developer,1,"Flutter, Dart, Firebase, REST API, Git","Flutter, Dart, Firebase, Communication, Problem Solving",B.Tech/B.E/MCA/BCA
+JD008,Data Scientist,2,"Python, Pandas, NumPy, Machine Learning, SQL","Python, Pandas, NumPy, Communication, Problem Solving",B.Tech/B.E/MCA/BCA
+JD009,AI Engineer,3,"Python, TensorFlow, PyTorch, Machine Learning, OpenCV","Python, TensorFlow, PyTorch, Communication, Problem Solving",B.Tech/B.E/MCA/BCA
+JD010,DevOps Engineer,4,"Docker, Kubernetes, Jenkins, AWS, Linux","Docker, Kubernetes, Jenkins, Communication, Problem Solving",B.Tech/B.E/MCA/BCA
+JD011,Cloud Engineer,5,"AWS, Azure, Docker, Linux, Terraform","AWS, Azure, Docker, Communication, Problem Solving",B.Tech/B.E/MCA/BCA
+JD012,QA Engineer,0,"Selenium, JUnit, Postman, Cypress, Git","Selenium, JUnit, Postman, Communication, Problem Solving",B.Tech/B.E/MCA/BCA
+JD013,Security Engineer,1,"Linux, Python, Networking, Security, AWS","Linux, Python, Networking, Communication, Problem Solving",B.Tech/B.E/MCA/BCA
+JD014,Data Engineer,2,"Python, SQL, Kafka, Spark, AWS","Python, SQL, Kafka, Communication, Problem Solving",B.Tech/B.E/MCA/BCA
+JD015,Full Stack Developer,3,"Java, Spring Boot, React, MySQL, Git","Java, Spring Boot, React, Communication, Problem Solving",B.Tech/B.E/MCA/BCA
+JD016,Java Developer,4,"Java, Spring Boot, Hibernate, MySQL, Git","Java, Spring Boot, Hibernate, Communication, Problem Solving",B.Tech/B.E/MCA/BCA
+JD017,Python Developer,5,"Python, Django, Flask, SQL, Git","Python, Django, Flask, Communication, Problem Solving",B.Tech/B.E/MCA/BCA
+JD018,MERN Stack Developer,0,"MongoDB, Express.js, React, Node.js, JavaScript","MongoDB, Express.js, React, Communication, Problem Solving",B.Tech/B.E/MCA/BCA
+JD019,Frontend Developer,1,"HTML, CSS, JavaScript, React, TypeScript","HTML, CSS, JavaScript, Communication, Problem Solving",B.Tech/B.E/MCA/BCA
+JD020,Backend Developer,2,"Java, Spring Boot, REST API, MySQL, Docker","Java, Spring Boot, REST API, Communication, Problem Solving",B.Tech/B.E/MCA/BCA
+JD021,Android Developer,3,"Java, Kotlin, Android, Firebase, Git","Java, Kotlin, Android, Communication, Problem Solving",B.Tech/B.E/MCA/BCA
+JD022,Flutter Developer,4,"Flutter, Dart, Firebase, REST API, Git","Flutter, Dart, Firebase, Communication, Problem Solving",B.Tech/B.E/MCA/BCA
+JD023,Data Scientist,5,"Python, Pandas, NumPy, Machine Learning, SQL","Python, Pandas, NumPy, Communication, Problem Solving",B.Tech/B.E/MCA/BCA
+JD024,AI Engineer,0,"Python, TensorFlow, PyTorch, Machine Learning, OpenCV","Python, TensorFlow, PyTorch, Communication, Problem Solving",B.Tech/B.E/MCA/BCA
+JD025,DevOps Engineer,1,"Docker, Kubernetes, Jenkins, AWS, Linux","Docker, Kubernetes, Jenkins, Communication, Problem Solving",B.Tech/B.E/MCA/BCA
+JD026,Cloud Engineer,2,"AWS, Azure, Docker, Linux, Terraform","AWS, Azure, Docker, Communication, Problem Solving",B.Tech/B.E/MCA/BCA
+JD027,QA Engineer,3,"Selenium, JUnit, Postman, Cypress, Git","Selenium, JUnit, Postman, Communication, Problem Solving",B.Tech/B.E/MCA/BCA
+JD028,Security Engineer,4,"Linux, Python, Networking, Security, AWS","Linux, Python, Networking, Communication, Problem Solving",B.Tech/B.E/MCA/BCA
+JD029,Data Engineer,5,"Python, SQL, Kafka, Spark, AWS","Python, SQL, Kafka, Communication, Problem Solving",B.Tech/B.E/MCA/BCA
+JD030,Full Stack Developer,0,"Java, Spring Boot, React, MySQL, Git","Java, Spring Boot, React, Communication, Problem Solving",B.Tech/B.E/MCA/BCA
+JD031,Java Developer,1,"Java, Spring Boot, Hibernate, MySQL, Git","Java, Spring Boot, Hibernate, Communication, Problem Solving",B.Tech/B.E/MCA/BCA
+JD032,Python Developer,2,"Python, Django, Flask, SQL, Git","Python, Django, Flask, Communication, Problem Solving",B.Tech/B.E/MCA/BCA
+JD033,MERN Stack Developer,3,"MongoDB, Express.js, React, Node.js, JavaScript","MongoDB, Express.js, React, Communication, Problem Solving",B.Tech/B.E/MCA/BCA
+JD034,Frontend Developer,4,"HTML, CSS, JavaScript, React, TypeScript","HTML, CSS, JavaScript, Communication, Problem Solving",B.Tech/B.E/MCA/BCA
+JD035,Backend Developer,5,"Java, Spring Boot, REST API, MySQL, Docker","Java, Spring Boot, REST API, Communication, Problem Solving",B.Tech/B.E/MCA/BCA
+JD036,Android Developer,0,"Java, Kotlin, Android, Firebase, Git","Java, Kotlin, Android, Communication, Problem Solving",B.Tech/B.E/MCA/BCA
+JD037,Flutter Developer,1,"Flutter, Dart, Firebase, REST API, Git","Flutter, Dart, Firebase, Communication, Problem Solving",B.Tech/B.E/MCA/BCA
+JD038,Data Scientist,2,"Python, Pandas, NumPy, Machine Learning, SQL","Python, Pandas, NumPy, Communication, Problem Solving",B.Tech/B.E/MCA/BCA
+JD039,AI Engineer,3,"Python, TensorFlow, PyTorch, Machine Learning, OpenCV","Python, TensorFlow, PyTorch, Communication, Problem Solving",B.Tech/B.E/MCA/BCA
+JD040,DevOps Engineer,4,"Docker, Kubernetes, Jenkins, AWS, Linux","Docker, Kubernetes, Jenkins, Communication, Problem Solving",B.Tech/B.E/MCA/BCA
+JD041,Cloud Engineer,5,"AWS, Azure, Docker, Linux, Terraform","AWS, Azure, Docker, Communication, Problem Solving",B.Tech/B.E/MCA/BCA
+JD042,QA Engineer,0,"Selenium, JUnit, Postman, Cypress, Git","Selenium, JUnit, Postman, Communication, Problem Solving",B.Tech/B.E/MCA/BCA
+JD043,Security Engineer,1,"Linux, Python, Networking, Security, AWS","Linux, Python, Networking, Communication, Problem Solving",B.Tech/B.E/MCA/BCA
+JD044,Data Engineer,2,"Python, SQL, Kafka, Spark, AWS","Python, SQL, Kafka, Communication, Problem Solving",B.Tech/B.E/MCA/BCA
+JD045,Full Stack Developer,3,"Java, Spring Boot, React, MySQL, Git","Java, Spring Boot, React, Communication, Problem Solving",B.Tech/B.E/MCA/BCA
+JD046,Java Developer,4,"Java, Spring Boot, Hibernate, MySQL, Git","Java, Spring Boot, Hibernate, Communication, Problem Solving",B.Tech/B.E/MCA/BCA
+JD047,Python Developer,5,"Python, Django, Flask, SQL, Git","Python, Django, Flask, Communication, Problem Solving",B.Tech/B.E/MCA/BCA
+JD048,MERN Stack Developer,0,"MongoDB, Express.js, React, Node.js, JavaScript","MongoDB, Express.js, React, Communication, Problem Solving",B.Tech/B.E/MCA/BCA
+JD049,Frontend Developer,1,"HTML, CSS, JavaScript, React, TypeScript","HTML, CSS, JavaScript, Communication, Problem Solving",B.Tech/B.E/MCA/BCA
+JD050,Backend Developer,2,"Java, Spring Boot, REST API, MySQL, Docker","Java, Spring Boot, REST API, Communication, Problem Solving",B.Tech/B.E/MCA/BCA
+JD051,Android Developer,3,"Java, Kotlin, Android, Firebase, Git","Java, Kotlin, Android, Communication, Problem Solving",B.Tech/B.E/MCA/BCA
+JD052,Flutter Developer,4,"Flutter, Dart, Firebase, REST API, Git","Flutter, Dart, Firebase, Communication, Problem Solving",B.Tech/B.E/MCA/BCA
+JD053,Data Scientist,5,"Python, Pandas, NumPy, Machine Learning, SQL","Python, Pandas, NumPy, Communication, Problem Solving",B.Tech/B.E/MCA/BCA
+JD054,AI Engineer,0,"Python, TensorFlow, PyTorch, Machine Learning, OpenCV","Python, TensorFlow, PyTorch, Communication, Problem Solving",B.Tech/B.E/MCA/BCA
+JD055,DevOps Engineer,1,"Docker, Kubernetes, Jenkins, AWS, Linux","Docker, Kubernetes, Jenkins, Communication, Problem Solving",B.Tech/B.E/MCA/BCA
+JD056,Cloud Engineer,2,"AWS, Azure, Docker, Linux, Terraform","AWS, Azure, Docker, Communication, Problem Solving",B.Tech/B.E/MCA/BCA
+JD057,QA Engineer,3,"Selenium, JUnit, Postman, Cypress, Git","Selenium, JUnit, Postman, Communication, Problem Solving",B.Tech/B.E/MCA/BCA
+JD058,Security Engineer,4,"Linux, Python, Networking, Security, AWS","Linux, Python, Networking, Communication, Problem Solving",B.Tech/B.E/MCA/BCA
+JD059,Data Engineer,5,"Python, SQL, Kafka, Spark, AWS","Python, SQL, Kafka, Communication, Problem Solving",B.Tech/B.E/MCA/BCA
+JD060,Full Stack Developer,0,"Java, Spring Boot, React, MySQL, Git","Java, Spring Boot, React, Communication, Problem Solving",B.Tech/B.E/MCA/BCA
+JD061,Java Developer,1,"Java, Spring Boot, Hibernate, MySQL, Git","Java, Spring Boot, Hibernate, Communication, Problem Solving",B.Tech/B.E/MCA/BCA
+JD062,Python Developer,2,"Python, Django, Flask, SQL, Git","Python, Django, Flask, Communication, Problem Solving",B.Tech/B.E/MCA/BCA
+JD063,MERN Stack Developer,3,"MongoDB, Express.js, React, Node.js, JavaScript","MongoDB, Express.js, React, Communication, Problem Solving",B.Tech/B.E/MCA/BCA
+JD064,Frontend Developer,4,"HTML, CSS, JavaScript, React, TypeScript","HTML, CSS, JavaScript, Communication, Problem Solving",B.Tech/B.E/MCA/BCA
+JD065,Backend Developer,5,"Java, Spring Boot, REST API, MySQL, Docker","Java, Spring Boot, REST API, Communication, Problem Solving",B.Tech/B.E/MCA/BCA
+JD066,Android Developer,0,"Java, Kotlin, Android, Firebase, Git","Java, Kotlin, Android, Communication, Problem Solving",B.Tech/B.E/MCA/BCA
+JD067,Flutter Developer,1,"Flutter, Dart, Firebase, REST API, Git","Flutter, Dart, Firebase, Communication, Problem Solving",B.Tech/B.E/MCA/BCA
+JD068,Data Scientist,2,"Python, Pandas, NumPy, Machine Learning, SQL","Python, Pandas, NumPy, Communication, Problem Solving",B.Tech/B.E/MCA/BCA
+JD069,AI Engineer,3,"Python, TensorFlow, PyTorch, Machine Learning, OpenCV","Python, TensorFlow, PyTorch, Communication, Problem Solving",B.Tech/B.E/MCA/BCA
+JD070,DevOps Engineer,4,"Docker, Kubernetes, Jenkins, AWS, Linux","Docker, Kubernetes, Jenkins, Communication, Problem Solving",B.Tech/B.E/MCA/BCA
+JD071,Cloud Engineer,5,"AWS, Azure, Docker, Linux, Terraform","AWS, Azure, Docker, Communication, Problem Solving",B.Tech/B.E/MCA/BCA
+JD072,QA Engineer,0,"Selenium, JUnit, Postman, Cypress, Git","Selenium, JUnit, Postman, Communication, Problem Solving",B.Tech/B.E/MCA/BCA
+JD073,Security Engineer,1,"Linux, Python, Networking, Security, AWS","Linux, Python, Networking, Communication, Problem Solving",B.Tech/B.E/MCA/BCA
+JD074,Data Engineer,2,"Python, SQL, Kafka, Spark, AWS","Python, SQL, Kafka, Communication, Problem Solving",B.Tech/B.E/MCA/BCA
+JD075,Full Stack Developer,3,"Java, Spring Boot, React, MySQL, Git","Java, Spring Boot, React, Communication, Problem Solving",B.Tech/B.E/MCA/BCA
+JD076,Java Developer,4,"Java, Spring Boot, Hibernate, MySQL, Git","Java, Spring Boot, Hibernate, Communication, Problem Solving",B.Tech/B.E/MCA/BCA
+JD077,Python Developer,5,"Python, Django, Flask, SQL, Git","Python, Django, Flask, Communication, Problem Solving",B.Tech/B.E/MCA/BCA
+JD078,MERN Stack Developer,0,"MongoDB, Express.js, React, Node.js, JavaScript","MongoDB, Express.js, React, Communication, Problem Solving",B.Tech/B.E/MCA/BCA
+JD079,Frontend Developer,1,"HTML, CSS, JavaScript, React, TypeScript","HTML, CSS, JavaScript, Communication, Problem Solving",B.Tech/B.E/MCA/BCA
+JD080,Backend Developer,2,"Java, Spring Boot, REST API, MySQL, Docker","Java, Spring Boot, REST API, Communication, Problem Solving",B.Tech/B.E/MCA/BCA
+JD081,Android Developer,3,"Java, Kotlin, Android, Firebase, Git","Java, Kotlin, Android, Communication, Problem Solving",B.Tech/B.E/MCA/BCA
+JD082,Flutter Developer,4,"Flutter, Dart, Firebase, REST API, Git","Flutter, Dart, Firebase, Communication, Problem Solving",B.Tech/B.E/MCA/BCA
+JD083,Data Scientist,5,"Python, Pandas, NumPy, Machine Learning, SQL","Python, Pandas, NumPy, Communication, Problem Solving",B.Tech/B.E/MCA/BCA
+JD084,AI Engineer,0,"Python, TensorFlow, PyTorch, Machine Learning, OpenCV","Python, TensorFlow, PyTorch, Communication, Problem Solving",B.Tech/B.E/MCA/BCA
+JD085,DevOps Engineer,1,"Docker, Kubernetes, Jenkins, AWS, Linux","Docker, Kubernetes, Jenkins, Communication, Problem Solving",B.Tech/B.E/MCA/BCA
+JD086,Cloud Engineer,2,"AWS, Azure, Docker, Linux, Terraform","AWS, Azure, Docker, Communication, Problem Solving",B.Tech/B.E/MCA/BCA
+JD087,QA Engineer,3,"Selenium, JUnit, Postman, Cypress, Git","Selenium, JUnit, Postman, Communication, Problem Solving",B.Tech/B.E/MCA/BCA
+JD088,Security Engineer,4,"Linux, Python, Networking, Security, AWS","Linux, Python, Networking, Communication, Problem Solving",B.Tech/B.E/MCA/BCA
+JD089,Data Engineer,5,"Python, SQL, Kafka, Spark, AWS","Python, SQL, Kafka, Communication, Problem Solving",B.Tech/B.E/MCA/BCA
+JD090,Full Stack Developer,0,"Java, Spring Boot, React, MySQL, Git","Java, Spring Boot, React, Communication, Problem Solving",B.Tech/B.E/MCA/BCA
+JD091,Java Developer,1,"Java, Spring Boot, Hibernate, MySQL, Git","Java, Spring Boot, Hibernate, Communication, Problem Solving",B.Tech/B.E/MCA/BCA
+JD092,Python Developer,2,"Python, Django, Flask, SQL, Git","Python, Django, Flask, Communication, Problem Solving",B.Tech/B.E/MCA/BCA
+JD093,MERN Stack Developer,3,"MongoDB, Express.js, React, Node.js, JavaScript","MongoDB, Express.js, React, Communication, Problem Solving",B.Tech/B.E/MCA/BCA
+JD094,Frontend Developer,4,"HTML, CSS, JavaScript, React, TypeScript","HTML, CSS, JavaScript, Communication, Problem Solving",B.Tech/B.E/MCA/BCA
+JD095,Backend Developer,5,"Java, Spring Boot, REST API, MySQL, Docker","Java, Spring Boot, REST API, Communication, Problem Solving",B.Tech/B.E/MCA/BCA
+JD096,Android Developer,0,"Java, Kotlin, Android, Firebase, Git","Java, Kotlin, Android, Communication, Problem Solving",B.Tech/B.E/MCA/BCA
+JD097,Flutter Developer,1,"Flutter, Dart, Firebase, REST API, Git","Flutter, Dart, Firebase, Communication, Problem Solving",B.Tech/B.E/MCA/BCA
+JD098,Data Scientist,2,"Python, Pandas, NumPy, Machine Learning, SQL","Python, Pandas, NumPy, Communication, Problem Solving",B.Tech/B.E/MCA/BCA
+JD099,AI Engineer,3,"Python, TensorFlow, PyTorch, Machine Learning, OpenCV","Python, TensorFlow, PyTorch, Communication, Problem Solving",B.Tech/B.E/MCA/BCA
+JD100,DevOps Engineer,4,"Docker, Kubernetes, Jenkins, AWS, Linux","Docker, Kubernetes, Jenkins, Communication, Problem Solving",B.Tech/B.E/MCA/BCA
+JD101,Cloud Engineer,5,"AWS, Azure, Docker, Linux, Terraform","AWS, Azure, Docker, Communication, Problem Solving",B.Tech/B.E/MCA/BCA
+JD102,QA Engineer,0,"Selenium, JUnit, Postman, Cypress, Git","Selenium, JUnit, Postman, Communication, Problem Solving",B.Tech/B.E/MCA/BCA
+JD103,Security Engineer,1,"Linux, Python, Networking, Security, AWS","Linux, Python, Networking, Communication, Problem Solving",B.Tech/B.E/MCA/BCA
+JD104,Data Engineer,2,"Python, SQL, Kafka, Spark, AWS","Python, SQL, Kafka, Communication, Problem Solving",B.Tech/B.E/MCA/BCA
+JD105,Full Stack Developer,3,"Java, Spring Boot, React, MySQL, Git","Java, Spring Boot, React, Communication, Problem Solving",B.Tech/B.E/MCA/BCA
+JD106,Java Developer,4,"Java, Spring Boot, Hibernate, MySQL, Git","Java, Spring Boot, Hibernate, Communication, Problem Solving",B.Tech/B.E/MCA/BCA
+JD107,Python Developer,5,"Python, Django, Flask, SQL, Git","Python, Django, Flask, Communication, Problem Solving",B.Tech/B.E/MCA/BCA
+JD108,MERN Stack Developer,0,"MongoDB, Express.js, React, Node.js, JavaScript","MongoDB, Express.js, React, Communication, Problem Solving",B.Tech/B.E/MCA/BCA
+JD109,Frontend Developer,1,"HTML, CSS, JavaScript, React, TypeScript","HTML, CSS, JavaScript, Communication, Problem Solving",B.Tech/B.E/MCA/BCA
+JD110,Backend Developer,2,"Java, Spring Boot, REST API, MySQL, Docker","Java, Spring Boot, REST API, Communication, Problem Solving",B.Tech/B.E/MCA/BCA
+JD111,Android Developer,3,"Java, Kotlin, Android, Firebase, Git","Java, Kotlin, Android, Communication, Problem Solving",B.Tech/B.E/MCA/BCA
+JD112,Flutter Developer,4,"Flutter, Dart, Firebase, REST API, Git","Flutter, Dart, Firebase, Communication, Problem Solving",B.Tech/B.E/MCA/BCA
+JD113,Data Scientist,5,"Python, Pandas, NumPy, Machine Learning, SQL","Python, Pandas, NumPy, Communication, Problem Solving",B.Tech/B.E/MCA/BCA
+JD114,AI Engineer,0,"Python, TensorFlow, PyTorch, Machine Learning, OpenCV","Python, TensorFlow, PyTorch, Communication, Problem Solving",B.Tech/B.E/MCA/BCA
+JD115,DevOps Engineer,1,"Docker, Kubernetes, Jenkins, AWS, Linux","Docker, Kubernetes, Jenkins, Communication, Problem Solving",B.Tech/B.E/MCA/BCA
+JD116,Cloud Engineer,2,"AWS, Azure, Docker, Linux, Terraform","AWS, Azure, Docker, Communication, Problem Solving",B.Tech/B.E/MCA/BCA
+JD117,QA Engineer,3,"Selenium, JUnit, Postman, Cypress, Git","Selenium, JUnit, Postman, Communication, Problem Solving",B.Tech/B.E/MCA/BCA
+JD118,Security Engineer,4,"Linux, Python, Networking, Security, AWS","Linux, Python, Networking, Communication, Problem Solving",B.Tech/B.E/MCA/BCA
+JD119,Data Engineer,5,"Python, SQL, Kafka, Spark, AWS","Python, SQL, Kafka, Communication, Problem Solving",B.Tech/B.E/MCA/BCA
+JD120,Full Stack Developer,0,"Java, Spring Boot, React, MySQL, Git","Java, Spring Boot, React, Communication, Problem Solving",B.Tech/B.E/MCA/BCA
+JD121,Java Developer,1,"Java, Spring Boot, Hibernate, MySQL, Git","Java, Spring Boot, Hibernate, Communication, Problem Solving",B.Tech/B.E/MCA/BCA
+JD122,Python Developer,2,"Python, Django, Flask, SQL, Git","Python, Django, Flask, Communication, Problem Solving",B.Tech/B.E/MCA/BCA
+JD123,MERN Stack Developer,3,"MongoDB, Express.js, React, Node.js, JavaScript","MongoDB, Express.js, React, Communication, Problem Solving",B.Tech/B.E/MCA/BCA
+JD124,Frontend Developer,4,"HTML, CSS, JavaScript, React, TypeScript","HTML, CSS, JavaScript, Communication, Problem Solving",B.Tech/B.E/MCA/BCA
+JD125,Backend Developer,5,"Java, Spring Boot, REST API, MySQL, Docker","Java, Spring Boot, REST API, Communication, Problem Solving",B.Tech/B.E/MCA/BCA
+JD126,Android Developer,0,"Java, Kotlin, Android, Firebase, Git","Java, Kotlin, Android, Communication, Problem Solving",B.Tech/B.E/MCA/BCA
+JD127,Flutter Developer,1,"Flutter, Dart, Firebase, REST API, Git","Flutter, Dart, Firebase, Communication, Problem Solving",B.Tech/B.E/MCA/BCA
+JD128,Data Scientist,2,"Python, Pandas, NumPy, Machine Learning, SQL","Python, Pandas, NumPy, Communication, Problem Solving",B.Tech/B.E/MCA/BCA
+JD129,AI Engineer,3,"Python, TensorFlow, PyTorch, Machine Learning, OpenCV","Python, TensorFlow, PyTorch, Communication, Problem Solving",B.Tech/B.E/MCA/BCA
+JD130,DevOps Engineer,4,"Docker, Kubernetes, Jenkins, AWS, Linux","Docker, Kubernetes, Jenkins, Communication, Problem Solving",B.Tech/B.E/MCA/BCA
+JD131,Cloud Engineer,5,"AWS, Azure, Docker, Linux, Terraform","AWS, Azure, Docker, Communication, Problem Solving",B.Tech/B.E/MCA/BCA
+JD132,QA Engineer,0,"Selenium, JUnit, Postman, Cypress, Git","Selenium, JUnit, Postman, Communication, Problem Solving",B.Tech/B.E/MCA/BCA
+JD133,Security Engineer,1,"Linux, Python, Networking, Security, AWS","Linux, Python, Networking, Communication, Problem Solving",B.Tech/B.E/MCA/BCA
+JD134,Data Engineer,2,"Python, SQL, Kafka, Spark, AWS","Python, SQL, Kafka, Communication, Problem Solving",B.Tech/B.E/MCA/BCA
+JD135,Full Stack Developer,3,"Java, Spring Boot, React, MySQL, Git","Java, Spring Boot, React, Communication, Problem Solving",B.Tech/B.E/MCA/BCA
+JD136,Java Developer,4,"Java, Spring Boot, Hibernate, MySQL, Git","Java, Spring Boot, Hibernate, Communication, Problem Solving",B.Tech/B.E/MCA/BCA
+JD137,Python Developer,5,"Python, Django, Flask, SQL, Git","Python, Django, Flask, Communication, Problem Solving",B.Tech/B.E/MCA/BCA
+JD138,MERN Stack Developer,0,"MongoDB, Express.js, React, Node.js, JavaScript","MongoDB, Express.js, React, Communication, Problem Solving",B.Tech/B.E/MCA/BCA
+JD139,Frontend Developer,1,"HTML, CSS, JavaScript, React, TypeScript","HTML, CSS, JavaScript, Communication, Problem Solving",B.Tech/B.E/MCA/BCA
+JD140,Backend Developer,2,"Java, Spring Boot, REST API, MySQL, Docker","Java, Spring Boot, REST API, Communication, Problem Solving",B.Tech/B.E/MCA/BCA
+JD141,Android Developer,3,"Java, Kotlin, Android, Firebase, Git","Java, Kotlin, Android, Communication, Problem Solving",B.Tech/B.E/MCA/BCA
+JD142,Flutter Developer,4,"Flutter, Dart, Firebase, REST API, Git","Flutter, Dart, Firebase, Communication, Problem Solving",B.Tech/B.E/MCA/BCA
+JD143,Data Scientist,5,"Python, Pandas, NumPy, Machine Learning, SQL","Python, Pandas, NumPy, Communication, Problem Solving",B.Tech/B.E/MCA/BCA
+JD144,AI Engineer,0,"Python, TensorFlow, PyTorch, Machine Learning, OpenCV","Python, TensorFlow, PyTorch, Communication, Problem Solving",B.Tech/B.E/MCA/BCA
+JD145,DevOps Engineer,1,"Docker, Kubernetes, Jenkins, AWS, Linux","Docker, Kubernetes, Jenkins, Communication, Problem Solving",B.Tech/B.E/MCA/BCA
+JD146,Cloud Engineer,2,"AWS, Azure, Docker, Linux, Terraform","AWS, Azure, Docker, Communication, Problem Solving",B.Tech/B.E/MCA/BCA
+JD147,QA Engineer,3,"Selenium, JUnit, Postman, Cypress, Git","Selenium, JUnit, Postman, Communication, Problem Solving",B.Tech/B.E/MCA/BCA
+JD148,Security Engineer,4,"Linux, Python, Networking, Security, AWS","Linux, Python, Networking, Communication, Problem Solving",B.Tech/B.E/MCA/BCA
+JD149,Data Engineer,5,"Python, SQL, Kafka, Spark, AWS","Python, SQL, Kafka, Communication, Problem Solving",B.Tech/B.E/MCA/BCA
+JD150,Full Stack Developer,0,"Java, Spring Boot, React, MySQL, Git","Java, Spring Boot, React, Communication, Problem Solving",B.Tech/B.E/MCA/BCA

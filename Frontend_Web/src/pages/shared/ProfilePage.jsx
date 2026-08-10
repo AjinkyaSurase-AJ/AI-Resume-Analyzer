@@ -1,0 +1,14 @@
+import React, { useState } from 'react'
+import { updateProfile } from '@/api'
+import { Badge, Button, Icon, Panel, RoleBadge } from '@/components'
+import { initials } from '@/utils'
+
+export function ProfilePage({ token, user, onSession, notify }) {
+  const [form, setForm] = useState({ name: user.name || '', email: user.email || '', password: '' })
+  const [showPassword, setShowPassword] = useState(false)
+  const [busy, setBusy] = useState(false)
+  const [error, setError] = useState('')
+  const submit = async (event) => { event.preventDefault(); setBusy(true); setError(''); try { const payload = { name: form.name, email: form.email, ...(form.password ? { password: form.password } : {}) }; const updated = await updateProfile(payload, token); onSession(updated); setForm((s) => ({ ...s, password: '' })); notify('Profile settings updated successfully.') } catch (err) { setError(err.message) } finally { setBusy(false) } }
+  return <div className="profile-layout"><Panel title="Profile settings" subtitle="Keep your account details current."><div className="profile-banner"><span className="avatar avatar-large">{initials(form.name)}</span><div><h3>{form.name || 'Your account'}</h3><p>{form.email}</p><RoleBadge role={user.role} /></div></div><form className="stack-form profile-form" onSubmit={submit}><label className="field"><span>Full name</span><input required value={form.name} onChange={(e) => setForm({ ...form, name: e.target.value })} /></label><label className="field"><span>Email address</span><input required type="email" value={form.email} onChange={(e) => setForm({ ...form, email: e.target.value })} /></label><label className="field"><span>New password <em>Optional</em></span><div className="password-input-wrap"><input type={showPassword ? 'text' : 'password'} minLength={6} value={form.password} onChange={(e) => setForm({ ...form, password: e.target.value })} placeholder="Leave blank to keep the current password" /><button type="button" className="password-toggle-btn" onClick={() => setShowPassword(!showPassword)} title={showPassword ? 'Hide password' : 'Show password'}><Icon name={showPassword ? 'eyeOff' : 'eye'} size={17} /></button></div></label>{error && <div className="inline-error"><Icon name="warning" />{error}</div>}<Button icon="check" disabled={busy}>{busy ? 'Saving changes…' : 'Save changes'}</Button></form></Panel><Panel title="Account information" subtitle="Identity and access details"><div className="account-info"><div><span>User ID</span><strong>#{user.user_id}</strong></div><div><span>Workspace role</span><RoleBadge role={user.role} /></div><div><span>Account status</span><Badge tone="green">Active</Badge></div></div><div className="security-callout"><Icon name="server" /><div><strong>Security reminder</strong><p>Use a unique password and sign out on shared devices.</p></div></div></Panel></div>
+}
+
