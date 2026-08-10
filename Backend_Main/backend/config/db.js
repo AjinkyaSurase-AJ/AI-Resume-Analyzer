@@ -1,4 +1,5 @@
 const mysql = require("mysql2/promise");
+const path = require("path");
 
 const pool = mysql.createPool({
     host: process.env.DB_HOST,
@@ -8,7 +9,9 @@ const pool = mysql.createPool({
     database: process.env.DB_NAME,
 
     ssl: {
-        minVersion: "TLSv1.2",
+        ca: require("fs").readFileSync(
+            path.join(__dirname, "../cert/isrgrootx1.pem")
+        ),
         rejectUnauthorized: true
     },
 
