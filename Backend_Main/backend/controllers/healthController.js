@@ -13,7 +13,10 @@ const healthCheck = async (req, res) => {
       },
     });
   } catch (error) {
-    console.error("Health check database error:", error.message);
+    console.error("Health check database error:", error);
+    console.error("Error message:", error.message);
+    console.error("Error code:", error.code);
+    console.error("Error stack:", error.stack);
 
     return res.status(503).json({
       success: false,
