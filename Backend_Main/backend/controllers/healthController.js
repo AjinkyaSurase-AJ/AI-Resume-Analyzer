@@ -1,5 +1,12 @@
 const db = require("../config/db");
 
+function createDummyHealthStatus() {
+  return {
+    server: "UP",
+    database: "CONNECTED",
+  };
+}
+
 const healthCheck = async (req, res) => {
   try {
     await db.query("SELECT 1");
